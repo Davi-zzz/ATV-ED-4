@@ -1,5 +1,6 @@
 package questao1;
 
+import java.math.BigInteger;
 import java.util.Random;
 
 public class Vetores {
@@ -50,4 +51,33 @@ public class Vetores {
 		return total;
 	}
 //=====================================================================================================//
+	public static int somaDosItensRB(int runner, int[] vetor) {
+		 int total; 
+		 //TENTEI DE TODAS AS FORMAS E NÃO CONSEGUI :=(
+	}		 
+//=====================================================================================================//
+	public static BigInteger fiboSimple(int n,BigInteger[] f) {
+		
+		if (n == 0) {
+			f[0] = BigInteger.valueOf(0);			
+			n++;
+			return fiboSimple(n, f);
+		}
+		else if(n == 1) {
+			f[1] = BigInteger.valueOf(1);
+			n++;
+			return fiboSimple(n, f);
+		}
+		else {
+			if (n == f.length-1) {
+				return f[n] = f[n-1].add(f[n-2]);
+			}
+			f[n] = f[n-1].add(f[n-2]);
+			n++;
+			return fiboSimple(n, f);
+			
+		}
+	}
 }
+
+	
